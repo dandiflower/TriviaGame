@@ -1,0 +1,49 @@
+  
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+      
+
+  <div id="display">0</div>
+  
+  
+  <script>
+
+
+
+var count=30;
+
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+  count=count-1;
+ 
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     //counter ended, do something here
+     return;
+  }
+
+$("#display").html(count);
+}
+console.log(timer); 
+
+timer();
+
+
+
+</script>
+
+</body>
+
+</html>
