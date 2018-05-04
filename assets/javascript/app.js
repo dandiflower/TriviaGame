@@ -46,22 +46,10 @@ if (!clockRunning) {
   
 // Stops the timer and ends the game
 
-// function stop() {
+function stop() {
 
-//     // DONE: Change the "display" div to "00"
-//     $("#display").text("00");
-//   }
-
-// function count() {
-
-// //  DONE: increment time by 1
-//     timer.time--;
-//     console.log(time);
-
-
-//     $("#display").text(time);
-//   }
-
-
+    // DONE: Change the "display" div to "00"
+    $("#display").text("00");
+  }
 
 });
