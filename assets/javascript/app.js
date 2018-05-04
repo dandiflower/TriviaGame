@@ -6,50 +6,49 @@ $(document).ready(function () {
   
   
   
-  $("#start").on("click", timer);
+  $("#start").on("click", countdown);
 
 
-  $("#stop").on("click", stop);
-  $("#true").on("click", );
-  $("#false").on("click", );
+  // $("#stop").on("click", done);
 
-  
+  // $(".pick").on("click", truthy);
+  // $("#false").on("click", truthy);
 
-// //  Variable that will hold our setInterval that runs the stopwatch
-var intervalId;
+// function truthy() {
+//   $(this).css('background-color', 'gray');
+//   var k = this.value;
+//   console.log(k)
+// }
 
-// // prevents the clock from being sped up unnecessarily
-var clockRunning = false;
 
-// // Our timer object
+
+// timer object
 var count = 30;
 
-function timer() {
-
-  var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
-   count = count - 1;
-   if (count <= 0) {
-     clearInterval(counter);
-     //counter ended
-     return;
-   }
-  //  console.log(count);
+function countdown() {
+  setTimeout(countdown, 1000); //1000 will run it every 1 second
   $("#display").html(count);
-   //Do code for showing the number of seconds here
- }
- 
-if (!clockRunning) {
-  intervalId = setInterval(timer.count);
-  clockRunning = true;
-}
+  count--;
 
+  if (count < 0) {
+    //counter ended
+    $("#display").html("You ran out of time!");
+  }
+}
   
+ 
 // Stops the timer and ends the game
 
-function stop() {
+$("#done").on("click", done);
 
-    // DONE: Change the "display" div to "00"
-    $("#display").text("00");
-  }
+function done() {
+  clearTimeout("#display");
+    $("#display").html("Done!");
+    // DONE:
+    return;
+}
+
+
+
 
 });
