@@ -49,34 +49,36 @@ function done() {
 
   
 }
-  // Quiz constructor
-  function quizConstructor(question, answer, enabled) {
-    this.question = question;
-    this.answer = answer;
-    this.enabled = enabled;
+  // Quiz array
 
-  // Create quiz array
-  var quiz = Array();
+var quiz = [{
+    question: "Is Montgomery is the capital of Alabama?", 
+    answer: false,
+},{
+    question: "Is Juneau is the capital of Alaska?",
+    answer: true,
+},{
+    question: "Is Phoenix is the capital of Arizona?", 
+    answer: true,
+},{
+    question: "Is Little Rock is the capital of Arkansas?", answer: false,
+},{
+    question: "Is Sacramento is the capital of California?", answer: true,
+},{
+    question: "Is Denver is the capital of Colorado?", 
+    answer: false,
+}];
 
-  // All quiz questions and answers
-  quiz[0] = quizConstructor("Is Montgomery is the capital of Alabama", false, 0);
-  quiz[1] = quizConstructor("Is Juneau is the capital of Alaska", true, 0);
-  quiz[2] = quizConstructor("Is Phoenix is the capital of Arizona", true, 0);
-  quiz[3] = quizConstructor("Is Little Rock is the capital of Arkansas", false, 0);
-  quiz[4] = quizConstructor("Is Sacramento is the capital of California", true, 0);
-  quiz[5] = quizConstructor("Is Denver is the capital of Colorado", false, 0);
-  quiz[6] = quizConstructor("Is Hartford is the capital of Connecticut", false, 0);
-  quiz[7] = quizConstructor("Is Dover is the capital of Delaware", false, 0);
-  quiz[8] = quizConstructor("Is Tallahassee is the capital of Florida", false, 0);
-  quiz[9] = quizConstructor("Is Atlanta is the capital of Georgia", true, 0);
+  
 
 
   // Ask question
-  var QA = quiz[0].question;
 
-    $("#question").html(quiz);
+  $("#question0").text(quiz[0].question);
+  $("#question1").text(quiz[1].question);
+  $("#question2").text(quiz[2].question);
+  $("#question3").text(quiz[3].question);
+  $("#question4").text(quiz[4].question);
+  $("#question5").text(quiz[5].question);
 
-    console.log(quiz);
-
-};
-
+});
