@@ -1,6 +1,12 @@
 // TRIVIA
 // =============================
 
+function myFunction() {
+    console.log("fuck");
+    var x = document.getElementById("myRadio").checked;
+    document.getElementById("demo").innerHTML = x;
+}
+
 $(document).ready(function () {
   
 $("#start").on("click", countdown);
@@ -35,18 +41,26 @@ $("#done").on("click", done);
 function done() {
     count = clearTimeout();
     $("#display").html("Done! Let's see how you did...");
-    //  records user inputs
-    var userInputs = [];
-        var x = document.getElementById("um").checked;
-        console.log(x);
-    }
-
+    // records user inputs
+    // picks which radio buttons are checked
+   
 
     
+    
+    //    if (foo.checked === true) {
+    //     console.log(foo);
+    // }
+}
+
+// var myFunction = function () {
+//     // var userInputs = [];
+//     var radioButton = document.getElementById("um").checked;
+//     document.getElementById("display2").innerHTML = radioButton;
+//     console.log(radioButton);
+// };
 
 
-
-  // Quiz array
+// Quiz array
 
 var quiz = [{
     question: "Is Montgomery is the capital of Alabama?", 
@@ -103,7 +117,8 @@ testCheck();
 //     }
 // document.getElementById("order").value = "You ordered a coffee with: " + txt;
 
-    // document.getElementById("t").checked = true;
+    // var test = document.getElementById("um").checked;
+    // console.log(test);
     // document.getElementById("f").checked = false;
     // const resultsContainer = document.getElementsByClassName('correct');
     // console.log(resultsContainer);
