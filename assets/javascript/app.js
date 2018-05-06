@@ -3,22 +3,11 @@
 
 $(document).ready(function () {
   
-  
-  
-  
-  $("#start").on("click", countdown);
+$("#start").on("click", countdown);
+
+$("#done").on("click", done);
 
 
-  $("#stop").on("click", done);
-
-  // $(".pick").on("click", truthy);
-  // $("#false").on("click", truthy);
-
-// function truthy() {
-//   $(this).css('background-color', 'gray');
-//   var k = this.value;
-//   console.log(k)
-// }
 
 
 
@@ -34,6 +23,8 @@ function countdown() {
     //counter ended
     $("#display").html("You ran out of time!");
   }
+
+//   $("#done").on("click", done);
 }
   
  
@@ -42,13 +33,13 @@ function countdown() {
 $("#done").on("click", done);
 
 function done() {
-   
-  clearTimeout("#display");
+    count = clearTimeout();
+    $("#display").html("Done! Let's see how you did...");
+    
+    }
 
-    $("#display").html("Done!");
 
-  
-}
+
   // Quiz array
 
 var quiz = [{
@@ -68,8 +59,6 @@ var quiz = [{
     question: "Is Denver is the capital of Colorado?", 
     answer: false,
 }];
-
-  
 
 
   // Ask question
