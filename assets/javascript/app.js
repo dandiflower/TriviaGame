@@ -35,8 +35,14 @@ $("#done").on("click", done);
 function done() {
     count = clearTimeout();
     $("#display").html("Done! Let's see how you did...");
-    
+    //  records user inputs
+    var userInputs = [];
+        var x = document.getElementById("um").checked;
+        console.log(x);
     }
+
+
+    
 
 
 
@@ -72,21 +78,36 @@ var quiz = [{
   $(".question4").text(quiz[4].question);
   $(".question5").text(quiz[5].question);
 
-
+// Creates an array of the correct answers 
 function testCheck() {
     for (i = 0; i < (quiz.length); i++) {
         var answersArray = [];
         var answers = quiz[i].answer;
         answersArray.push(answers);
-        console.log(answersArray);
+        // console.log(answersArray);
     }
 }  
 
-
+// Create an array of the user selected values
 
 testCheck();
 
-// const resultsContainer = document.getElementsByClassName('question');
-// console.log(resultsContainer);
+
+
+//     var txt = "";
+//     var i;
+//     for (i = 0; i < coffee.length; i++) {
+//         if (coffee[i].checked) {
+//             txt = txt + coffee[i].value + " ";
+//         }
+//     }
+// document.getElementById("order").value = "You ordered a coffee with: " + txt;
+
+    // document.getElementById("t").checked = true;
+    // document.getElementById("f").checked = false;
+    // const resultsContainer = document.getElementsByClassName('correct');
+    // console.log(resultsContainer);
+
+
 
 });
