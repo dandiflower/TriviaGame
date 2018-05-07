@@ -1,12 +1,13 @@
 // TRIVIA
 // =============================
 
-$(document).ready(function () {
+window.onload = function () {
     // when button clicked ...
    
    // Starts the countdown and begins the game
 
     $("#start").on("click", countdown);
+   
    
    // Stops the countdown and ends the game
 
@@ -45,54 +46,73 @@ $(document).ready(function () {
     $(".question4").text(quiz[4].question);
     $(".question5").text(quiz[5].question);
 
-    // Creates an array of the correct answers 
-    function testCheck() {
-        for (i = 0; i < (quiz.length); i++) {
-            var answersArray = [];
-            var answers = quiz[i].answer;
-            answersArray.push(answers);
-            // console.log(answersArray);
+ 
+    
+    function compare() {
+        testCheck();
+        userSelection();
+        // for (i = 0; i < 3; i++) {
+        //     if (userAnswers[i] === answersArray[i])
+        //         console.log("ok working");
+        // }
+    
+    
+            // Creates an array of the correct answers 
+            function testCheck() {
+                var answersArray = [];
+                for (i = 0; i < (quiz.length); i++) {
+                    var answers = quiz[i].answer;
+                    answersArray.push(answers);
+                }
+                console.log(answersArray);
+                return answersArray;
+            }  
+            // records user inputs
+            // picks which radio buttons are checked
+            function userSelection() {
+                // var user = $('input[type=radio]:checked');
+                // console.log(user);
+                var userAnswers = [];
+                for (var i = 0; i < 3; i++) {
+                    var user = document.getElementById("um" + i).checked;
+                    userAnswers.push(user);
+                }
+                console.log(userAnswers);
+                return userAnswers;
+            }
         }
-    }  
+            
 
-    testCheck();
+    function done() {
+        count = clearTimeout();
+        $("#display").html("Done! Let's see how you did...");
+        compare();
 
-
-});
-
-// records user inputs
-// picks which radio buttons are checked
-function userSelection() {
-    // var user = $('input[type=radio]:checked');
-    // console.log(user);
-    for (var i = 0; i<3; i++) {
-        var userAnswers = [];
-        var user = document.getElementById("um"+i).checked;
-        userAnswers.push(user);
-        console.log(userAnswers);
     }
-}
 
 
+    // timer object
+    var count = 20;
 
-function done() {
-    count = clearTimeout();
-    $("#display").html("Done! Let's see how you did...");
-}
+    function countdown() {
+        setTimeout(countdown, 1000); //1000 will run it every 1 second
+        $("#display").html(count);
+        count--;
 
-
-// timer object
-var count = 20;
-
-function countdown() {
-    setTimeout(countdown, 1000); //1000 will run it every 1 second
-    $("#display").html(count);
-    count--;
-
-    if (count < 0) {
-        //counter ended
-        $("#display").html("You ran out of time!");
+        if (count < 0) {
+            //counter ended
+            $("#display").html("You ran out of time!");
+        }
     }
-}
+
+
+   };
+
+
+
+
+
+
+
 
 
