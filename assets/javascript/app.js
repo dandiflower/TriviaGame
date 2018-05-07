@@ -1,38 +1,16 @@
 // TRIVIA
 // =============================
 
-
-
 $(document).ready(function () {
     // when button clicked ...
+   
+   // Starts the countdown and begins the game
+
     $("#start").on("click", countdown);
-    $("#done").on("click", done);
-
-
-
-
-
-
-    // timer object
-    var count = 20;
-
-    function countdown() {
-    setTimeout(countdown, 1000); //1000 will run it every 1 second
-    $("#display").html(count);
-    count--;
-
-        if (count < 0) {
-            //counter ended
-            $("#display").html("You ran out of time!");
-        }
-    }
-    
-    
-    // Stops the countdown and ends the game
+   
+   // Stops the countdown and ends the game
 
     $("#done").on("click", done);
-
-
 
 
     // Quiz array
@@ -58,7 +36,7 @@ $(document).ready(function () {
     }];
 
 
-    // Ask question
+    // writes questions
 
     $(".question0").text(quiz[0].question);
     $(".question1").text(quiz[1].question);
@@ -77,23 +55,44 @@ $(document).ready(function () {
         }
     }  
 
-    // Create an array of the user selected values
-
     testCheck();
-
-
 
 
 });
 
+// records user inputs
+// picks which radio buttons are checked
 function userSelection() {
-    var x = document.getElementById("myRadio").checked;
-    document.getElementById("demo").innerHTML = x;
+    // var user = $('input[type=radio]:checked');
+    // console.log(user);
+    for (var i = 0; i<3; i++) {
+        var userAnswers = [];
+        var user = document.getElementById("um"+i).checked;
+        userAnswers.push(user);
+        console.log(userAnswers);
+    }
 }
+
+
 
 function done() {
     count = clearTimeout();
     $("#display").html("Done! Let's see how you did...");
 }
-        // records user inputs
-        // picks which radio buttons are checked
+
+
+// timer object
+var count = 20;
+
+function countdown() {
+    setTimeout(countdown, 1000); //1000 will run it every 1 second
+    $("#display").html(count);
+    count--;
+
+    if (count < 0) {
+        //counter ended
+        $("#display").html("You ran out of time!");
+    }
+}
+
+
