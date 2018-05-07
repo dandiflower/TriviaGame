@@ -1,5 +1,8 @@
-body {
-    background-color: black;
+#formation {
+    display: none;
+    text-align: left;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 h1 {
@@ -8,7 +11,6 @@ h1 {
 
 .container {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
     text-align: center;
     margin-top: 10%;
     font-size: 12pt;

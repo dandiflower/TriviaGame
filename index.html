@@ -12,7 +12,7 @@
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
 
     
@@ -22,47 +22,55 @@
  
 <div class="container">
 
+<p id="ans0"></p>
+<p id="ans1"></p>
+<p id="ans2"></p>
+<p id="ans3"></p>
+<p id="ans4"></p>
+<p id="ans5"></p>
+
 <h1>Trivia</h1>
 
 <br>
 
     <div id="display">20</div>
     <p id="display2"></p>
+    
 
 <br> 
     <button id="start">Start</button>
 <br><br>
 
-<form>
-        <div class="question1"></div>
+<form id="formation">
+        <div class="question0"></div>
     True:<input id="um0" type="radio" name="qstn0" value="true">
         <br>
     False:<input id="um0" type="radio" name="qstn0">
         <br>
-
+    
     <br>
     <hr>
     <br>
 
-        <div class="question2"></div>
+        <div class="question1"></div>
     True:<input id="um1" type="radio" name="qstn1">
         <br>
     False:<input id="um1" type="radio" name="qstn1" value="false">
         <br>
-
+    
 
     <br>
     <hr>
     <br>
 
-        <div class="question3" value="true"></div>
+        <div class="question2" value="true"></div>
     True:<input id="um2" type="radio" name="qstn2">
         <br>
     False: <input id="um2" type="radio" name="qstn2">
         <br>
    
 
-    <!-- <br>
+    <br>
     <hr>
     <br>
    
@@ -92,9 +100,10 @@
     True:<input id="um5" type="radio" name="qstn5" value="t">
         <br>
     False:<input id="um5" type="radio" name="qstn5" value="f">
-        <br> -->
+        <br>
 
 </form>
+
 <br><br>
     <button id="done">Stop</button>
 
