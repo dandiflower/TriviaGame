@@ -104,6 +104,8 @@ window.onload = function () {
         count = clearTimeout();
         $("#display").html("Done! Let's see how you did...");
         compare();
+        var x = document.getElementById("formation");
+            x.style.display = "none";
 
     }
 

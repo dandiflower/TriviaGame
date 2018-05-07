@@ -8,18 +8,28 @@
     <title>TriviaGame</title>
 
     <!-- Our CSS style sheet -->
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Asset|Cormorant+Garamond" rel="stylesheet">
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
 
     
 </head>
 
 <body>
- 
+
+<nav class="navbar navbar-light bg-light text-center">
+    <div class="col"></div>
+    <div class="p-2 col navbar-brand mb-0 header">Trivia</div>
+    <div class="col"></div>
+</nav>
+
 <div class="container">
 
 <p id="ans0"></p>
@@ -29,19 +39,17 @@
 <p id="ans4"></p>
 <p id="ans5"></p>
 
-<h1>Trivia</h1>
-
 <br>
 
-    <div id="display">20</div>
-    <p id="display2"></p>
+    <div id="display">Countdown</div>
+    <div id="display2"></div>
     
 
 <br> 
     <button id="start">Start</button>
 <br><br>
 
-<form id="formation">
+<form class="card mt-2" id="formation">
         <div class="question0"></div>
     True:<input id="um0" type="radio" name="qstn0" value="true">
         <br>
@@ -63,7 +71,7 @@
     <hr>
     <br>
 
-        <div class="question2" value="true"></div>
+        <div class="question2"></div>
     True:<input id="um2" type="radio" name="qstn2">
         <br>
     False: <input id="um2" type="radio" name="qstn2">
@@ -74,7 +82,7 @@
     <hr>
     <br>
    
-        <div class="question3" value="false"></div>
+        <div class="question3"></div>
     True:<input id="um3" type="radio" name="qstn3" value="t">
         <br>
     False: <input id="um3" type="radio" name="qstn3" value="f">
@@ -85,7 +93,7 @@
     <hr>
     <br>
 
-        <div class="question4" value="true"></div>
+        <div class="question4"></div>
     True:<input id="um4" type="radio" name="qstn4" value="t">
         <br>
     False:<input id="um4" type="radio" name="qstn4" value="f">
@@ -96,7 +104,7 @@
     <hr>
     <br>
 
-        <div class="question5" value="false"></div>
+        <div class="question5"></div>
     True:<input id="um5" type="radio" name="qstn5" value="t">
         <br>
     False:<input id="um5" type="radio" name="qstn5" value="f">
