@@ -65,7 +65,7 @@ window.onload = function () {
     // Creates an array of the correct answers 
     function testCheck() {
         var answersArray = [];
-        for (i = 0; i < (quiz.length); i++) {
+        for (var i = 0; i < (quiz.length); i++) {
             var answers = quiz[i].answer;
             answersArray.push(answers);
         }
@@ -88,10 +88,10 @@ window.onload = function () {
         
        
     function compare() {
-        testCheck();
-        userSelection();
+        // testCheck();
+        // userSelection();
         
-        for (i = 0; i < 6; i++) {
+        for (var i = 0; i < 6; i++) {
             if (document.getElementById("um"+i).checked !== quiz[i].answer) {
                 $("#ans"+i).html("question" + (i+1) + " is wrong");
             }
